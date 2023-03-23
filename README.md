@@ -24,13 +24,6 @@ The following credentials can be used to log in:
 Email: insafinhaam732@gmail.com
 Password: Insaf@123
 
-Running the Server
-To run the server, navigate to the server directory and run the following command:
-
-# npm start
-
-This will start the server application. It will be accessible at http://localhost:5000.
-
 *Admin Panel Pages*
 The server provides the following admin panel pages:
 
@@ -39,3 +32,10 @@ http://localhost:3000/quiz
 http://localhost:3000/quizquestions
 http://localhost:3000/payment
 http://localhost:3000/finalallquiz
+
+Running the Server
+To run the server, navigate to the server directory and run the following command:
+
+# npm start
+
+This will start the server application. It will be accessible at http://localhost:5000.
