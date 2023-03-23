@@ -12,7 +12,7 @@ import { authenticateToken } from "../middleware/requireLogin.js";
 const router = express.Router();
 
 router.post("/login", Login);
-router.post("/createAdmin", authenticateToken, createAdmin);
+router.post("/createAdmin", createAdmin);
 router.put("/updateAdmin/:id", authenticateToken, updateAdmin);
 router.delete("/deleteAdmin/:id", authenticateToken, deleteAdmin);
 router.get("/getAdmin", authenticateToken, getAdmin);
