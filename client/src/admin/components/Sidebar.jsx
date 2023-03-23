@@ -31,7 +31,10 @@ const Sidebar = () => {
           </li>
           <li>
             <div className="d-flex align-items-center bottom_align">
+              <a href="/editprofile">
               <h5 className="pr-4 text-white text-capitalize mb-0">{admin.name}</h5>
+
+              </a>
               <button
                 type="button"
                 className="btn btn-danger me-3"

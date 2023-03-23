@@ -21,6 +21,7 @@ import EditQuizQuestions from "./admin/components/EditQuizQuestions";
 import EditQuiz from "./admin/components/EditQuiz";
 import FinalAllQuiz from "./admin/pages/FinalAllQuiz";
 import FinalQuiz from "./admin/pages/FinalQuiz";
+import EditProfile from "./admin/pages/EditProfile";
 
 // Define the initial state
 export const initialState = {
@@ -111,6 +112,12 @@ const Routing = () => {
         exact
         path="/finalquiz/:id"
         element={admin ? <FinalQuiz /> : <Navigate to="/login" />}
+      />
+
+      <Route
+        exact
+        path="/editprofile"
+        element={admin ? <EditProfile /> : <Navigate to="/login" />}
       />
 
       <Route exact path="/login" element={<Login />} />

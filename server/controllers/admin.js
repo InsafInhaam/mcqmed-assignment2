@@ -126,3 +126,24 @@ export const getAdminById = async (req, res) => {
     });
   }
 };
+
+export const editProfile = async (req, res) => {
+  let updateData = req.body;
+  
+  // Hash the password if it exists in the request body
+  if (updateData.password) {
+    const salt = bcrypt.genSaltSync(10);
+    const hashedPassword = await bcrypt.hashSync(updateData.password, salt);
+    updateData.password = hashedPassword;
+  }
+
+  const updateAdmin = await Admin.update(updateData, { where: { id: req.user.id } });
+
+  try {
+    res.status(201).json({message: "Post updated successfully", updateAdmin});
+  } catch (error) {
+    res.status(422).json({
+      error: error,
+    });
+  }
+};
